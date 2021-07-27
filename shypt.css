@@ -14,7 +14,7 @@ body{
     margin: 0;
 }
 
-.nav{
+.nav1{
     position: fixed;
     background-color: #222;
     top: 0;
@@ -22,37 +22,40 @@ body{
     right: 0;
     transition:all 0.3s ease-in;
 }
-nav ul{
+.nav1 ul{
     display: flex;
     list-style-type: none;
 
     align-items: center;
     justify-content: space-between;
 }
+.logo{
+    font-size: 1.3rem;
+}
 
-nav a{
+.nav1 a{
     color: white;
     text-decoration: none;
     padding: 10px;
 }
-.nav .container{
+.nav1 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav.active{
+.nav1.active{
     background-color: white;
     color: black;
 
 }
-.nav.active a{
+.nav1.active a{
     color: black;
 }
 
 .container{
     margin: 0 auto;
     padding: 10px;
-    max-width: 800px;
+    
 }
 
 .hero{
@@ -111,4 +114,104 @@ nav a{
     color: #555;
     line-height: 30px;
     letter-spacing: 0.1px;
+}
+
+.toast{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rebeccapurple;
+    font-weight: 700;
+    background-color: rgba(255,255,255,0.9);
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 0.8rem;
+    transition: all 0.5s ease-in;
+}
+.icon{
+    visibility:hidden;
+    color: orange;
+    animation: grow 0.3s linear;
+    
+}
+
+@keyframes grow {
+    to{
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+.nav2-btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+}
+.nav2.visible{
+    transform: translateX(0);
+}
+
+.nav2-black{
+    background-color: rgb(34,31,31);
+    width: 28%;
+    max-width: 280px;
+    min-width: 100px;
+    transition-delay: 0.4s;
+    transition:ease-in 0.4s;
+}
+.nav2-black.visible{
+    transition-delay: 0.4;
+    transition:ease-out 0.4s;
+}
+
+.nav2-red{
+    background-color: rgb(223, 32, 32);
+    width:90%;
+    transition-delay: 0.3s;
+    transition:ease-in 0.3s;
+}
+.nav2-red.visible{
+    transition-delay: 0.3s;
+    transition:ease-out 0.3s;
+}
+.nav2-white{
+    background-color: white;
+    width: 90%;
+    position:relative;
+    transition-delay: 0.2s;
+    transition:ease-in 0.2s;
+}
+.nav2-white.visible{
+    transition-delay: 0.4s;
+    transition:ease-out 0.4s;
+}
+.close-btn{
+    opacity: 0.3;
+    position: absolute;
+    right: 10px;
+    top: 27px;
+}
+.nav2 li a{
+    color: rgb(39, 3, 3);
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.nav2 li{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.nav2 span{
+    margin-top: 15px;
 }
