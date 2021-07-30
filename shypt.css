@@ -16,7 +16,7 @@ body{
 
 .nav1{
     position: fixed;
-    background-color: #222;
+    background-color: #ffffff;
     top: 0;
     left: 0;
     right: 0;
@@ -24,8 +24,10 @@ body{
 }
 .nav1 ul{
     display: flex;
+    flex-direction: row;
     list-style-type: none;
-
+    width: 30%;
+    font-size: 1em;
     align-items: center;
     justify-content: space-between;
 }
@@ -34,22 +36,38 @@ body{
 }
 
 .nav1 a{
-    color: white;
+    color: rgb(161, 81, 16);
     text-decoration: none;
-    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+    /* padding: 0.2rem; */
 }
+.nav1 i{
+    color: rgb(46, 46, 46);
+}
+.nav1.active i{
+    color: white;
+}
+
 .nav1 .container{
     display: flex;
     justify-content: space-between;
+    
+
     align-items: center;
 }
+.nav1.container.nav1-ul{
+    right: 0;
+    position: relative;
+}
 .nav1.active{
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
 }
 .nav1.active a{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .container{
@@ -214,4 +232,139 @@ body{
 }
 .nav2 span{
     margin-top: 15px;
+}
+.contact{
+    background-color: steelblue;
+    padding: 1em;
+}
+.contact-us-form{
+    padding: 0.5em;
+}
+
+.contact-us{
+    background-color: rgba(15, 15, 15, 0.5);
+    padding: 1em;
+    border-radius: 1em;
+    margin-top: 2em;
+    bottom: 0;
+    position: relative;
+    max-width: 600px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.contact-us ul{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    list-style: none;
+    font-size: 1em;
+    
+    
+}
+.contact-us ul a{
+    text-decoration: none;
+    color: white;
+    
+    margin-left: 0.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact-us ul li{
+    margin-right: 0.8em;
+}
+.form-heading{
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    margin-bottom:20px;
+    font-size: 1.5em;
+    color: lightblue;
+}
+
+.contact-us-form{
+    
+    align-items: center;
+    
+    margin-top: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 400px;
+    align-items: center;
+    margin-bottom:20px;
+    color: lightblue;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 15px 30px;
+    align-items: center;
+    background-color:rgba(0,0,0,0.6);
+}
+
+#name{
+    position: relative;
+    margin: 40px 0 40px;
+    margin-top: 40px;
+    
+   max-width: 100%; 
+}
+#message{
+    position: relative;
+    margin: 60px 0 40px;
+    max-width: 100%;
+}
+/* #email{
+    position: relative;
+    margin: 60px 0 40px;
+    width: 275px;
+} */
+
+.contact-us-form input{
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    display: block;
+    border-bottom: 2px white solid;
+    width: 100%;
+    padding: 5px;
+    color: white;
+}
+
+
+.contact-us-form .btn{
+    background-color: rgb(90, 90, 219);
+    padding: 15px;
+    color: white;
+    width:100%;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0;
+    
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+
+ 
+.form-control input:focus,
+.form-control input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+} 
+
+
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265,1.55);
+   
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color: lightblue;
+    transform: translateY(-30px);
 }

@@ -14,12 +14,13 @@
     <nav class="nav1">
         <div class="container">
             <btn class="logo" id="openbtn"><a href="#l">Shypt Solution</a></btn>
+            <div class="nav1-ul">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+                <li><a href="#"><i class="fas fa-home"></i>&nbspHome</a></li>
+                <li><a href="#"><i class="fas fa-user-alt"></i>&nbspAbout</a></li>
+                <li><a href="#"><i class="fas fa-code-branch"></i>&nbspServices</a></li>
+                <li><a href="#linkcontact"><i class="fas fa-envelope"></i>&nbspContact</a></li>
+            </ul></div>
 
         </div>
     </nav>
@@ -52,15 +53,36 @@
     <!-- <div><i class="fab fa-html5 icon"></i></div> -->
 
     <section class="container content">
-        <h2>Content</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates hic cumque officiis numquam libero odit
-            at itaque recusandae, fuga dolorem suscipit exercitationem facere, error mollitia eaque aspernatur eligendi
-            in perferendis molestias, tempore ducimus fugiat. Soluta cumque repellat ipsam enim. Accusantium iusto nam
-            facere blanditiis repellendus.</p>
-        <h3>Content two</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam praesentium nemo distinctio enim quisquam
-            reiciendis recusandae nobis totam animi facere atque, debitis, repellendus, magni fuga mollitia! Autem earum
-            delectus modi natus vel quo dolores eius.</p>
+        
+    </section>
+    <section class="contact" id="linkcontact">
+        
+        <div class="contact-us-form">
+            <div class="form-heading">Have Something in Mind <br>
+                Contact Us </div>
+            <form action="https://formsubmit.co/shyptsolution@gmail.com" method="POST">
+                <div class="form-control label" id="name"><input type="text" name="name" required ><label >Your Name</label></div>
+                <div class="form-control label" id="message"><input type="text" name="message" required ><label>Feedback/Message/Query</label></div>
+                <div class="form-control label" id="message"><input type="email" name="message" required ><label>Enter your E-mail</label></div>
+                <!-- <div class="form-control label" id="email"> <input type="email" name="email" ><label >Enter Your E-mail Address</label></div> -->
+               
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_autoresponse" value="your custom message">
+                <input type="hidden" name="_template" value="table">
+                <button type="submit" class="btn">Send Message</button>
+           </form>
+        </div>
+        <div class="contact-us">
+            <ul>
+                <li><i class="fab fa-youtube"><a href="https://www.youtube.com/channel/UC3um1eJD7AQmhTqctXguaWA/videos">YouTube</a></i></li>
+                <li><i class="fab fa-twitter"><a href="https://twitter.com/iraunit">Twitter</a></i></li>
+                <li><i class="fab fa-instagram"><a href="https://www.instagram.com/shyptsolution/">Instagram</a></i></li>
+                
+                <li><i class="fab fa-github"><a href="https://github.com/iraunit">Git Hub</a></i></li>
+                <li><i class="fab fa-quora"><a href="https://www.quora.com/profile/Raunit-Verma-9"target="_blank">Quora</a></i></li>
+                <li><i class="fab fa-linkedin"><a href="https://www.linkedin.com/in/iraunit/" target="_blank">Linked In</a></i></li>
+            </ul>
+        </div>
     </section>
 
     <script src="shypt.js"></script>
