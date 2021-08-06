@@ -86,3 +86,87 @@ labels.forEach(label=>{
     .map((letter,idx)=>`<span style="transition-delay:${idx*30}ms" >${letter}</span>`)
     .join('')
 })
+
+
+//testimonial
+
+const tesitmonialContainer=document.querySelector('.testimonial-container')
+const testimonial=document.querySelector('.testimonial')
+const userImage=document.querySelector('.user-image')
+const userName=document.getElementById('user-name')
+const role=document.querySelector('.role')
+const leftbtn=document.getElementById('right')
+const rightbtn=document.getElementById('left')
+
+const testimonials=[{
+    name:'Demo Name One',
+    position:'Student at NITRR',
+    photo:'https://randomuser.me/api/portraits/women/43.jpg',
+    text:"It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good ",
+},{
+    name:'Demo Name 2',
+    position:'Student at NITRR',
+    photo:'https://randomuser.me/api/portraits/women/43.jpg',
+    text:"It's looking badass It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good ",
+},
+    {
+        name:'Raunit Verma',
+        position:'Student at NITRR',
+        photo:'https://randomuser.me/api/portraits/women/43.jpg',
+        text:"It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good It's looking good ",
+},]
+
+let idxx=0;
+
+function updateTestimonial(){
+  const{name,position,photo,text}=  testimonials[idxx]
+  testimonial.innerHTML=text
+  userImage.src=photo
+  userName.innerHTML=name
+  role.innerHTML=position
+  idxx++
+  if(idxx>=testimonials.length){
+      idxx=0
+  }
+  
+}
+//for button clicks
+function updateTestimonial1(){
+    const{name,position,photo,text}=  testimonials[idxx]
+    testimonial.innerHTML=text
+    userImage.src=photo
+    userName.innerHTML=name
+    role.innerText=position
+    // if(idxx>=testimonials.length){
+    //     idxx=0
+    // }
+    // if(idxx<0){
+    //     idxx=testimonials.length
+    // }
+    
+  }
+updateTestimonial()
+setInterval(() => {
+    updateTestimonial()
+}, 10000);
+
+leftbtn.addEventListener('click',()=>{
+   if(idxx==0){
+       idxx=testimonials.length-1
+       updateTestimonial1()
+   }
+   else{
+       idxx--
+       updateTestimonial1()
+   }
+  
+    
+})
+
+rightbtn.addEventListener('click',()=>{
+    idxx++
+    if(idxx==testimonials.length){
+        idxx=0
+    }
+    updateTestimonial1()
+})
